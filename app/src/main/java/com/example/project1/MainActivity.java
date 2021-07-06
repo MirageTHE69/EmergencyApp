@@ -53,22 +53,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     protected void onActivityResult(int requestCode,
                                     int resultCode,
                                     Intent data) {
 
-
+        // Match the request 'pic id with requestCode
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == pic_id) {
 
             // BitMap is data structure of image file
-            // which stor the image in memory
+            // which store the image in memory
             Bitmap photo = (Bitmap) data.getExtras()
                     .get("data");
 
+            Intent link_intent = new Intent(MainActivity.this,Image_loader.class);
+            Bitmap bitmap = photo;
+            link_intent.putExtra("image", bitmap);
+            startActivity(link_intent);
+
             // Set the image in imageview for display
-            click_image_id.setImageBitmap(photo);
+            //click_image_id.setImageBitmap(photo);
         }
     }
 }

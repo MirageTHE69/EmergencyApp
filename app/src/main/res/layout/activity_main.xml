@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +9,15 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="402dp"
-        android:layout_height="105dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Are you in Emergency or file a accident??"
         android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textSize="25dp"
+        android:paddingLeft="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -24,20 +28,20 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="358dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:text="Press a button and capture a image"
         android:textColor="#67686b"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintBottom_toTopOf="@+id/camera_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/camera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,42 +52,19 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"/>
+        app:layout_constraintVertical_bias="0.592" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="206dp"
-        android:layout_height="55dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:background="@drawable/rounded_btn"
-        app:srcCompat="@drawable/home_page1"
-        android:scaleType="fitCenter"/>
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="206dp"
-        android:layout_height="55dp"
-        android:background="@drawable/rounded_btn1"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/settings1" />
 
-    <!--ImageView
-        android:id="@+id/click_image"
-        android:layout_width="351dp"
-        android:layout_height="166dp"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="501dp"
-        tools:ignore="MissingConstraints" /-->
+    <!--bottom naviagtion  Dhruv itvala work for tommorow done
+        bottom navigation not imageview button sir
+        bottom naviagtion which naviagte user to setting page
+        1.need to make fragment and xml
+        sreach about bottom naviagtion and work no that
+
+        task for tommorow done bottom naviatgation make a setting page ui
+        -->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
